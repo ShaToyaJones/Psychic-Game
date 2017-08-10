@@ -38,37 +38,35 @@ var wins = 0;
 var losses = 0;
 
 // Randomly chooses a choice from the alphabet array
-
-
 // Determines which key was pressed.
 // This function is run whenever the user presses a key.
 document.onkeyup = function(event){
 	var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
 	var userGuess = event.key;
 
-		if((userGuess == "a") || (userGuess == "b") || (userGuess == "c") ||(userGuess == "d") ||(userGuess == "e") ||(userGuess == "f") ||(userGuess == "g") ||(userGuess == "h") ||(userGuess == "i") ||(userGuess == "j") ||(userGuess == "k") ||(userGuess == "l") ||(userGuess == "m") ||(userGuess == "n") ||(userGuess == "o") ||(userGuess == "p") ||(userGuess == "q") ||(userGuess == "r") ||(userGuess == "s") ||(userGuess == "t") ||(userGuess == "u") ||(userGuess == "v") ||(userGuess == "w") ||(userGuess == "x") ||(userGuess == "y") ||(userGuess == "z")) {
+		if((userGuess == "a") || (userGuess == "b") || (userGuess == "c") || (userGuess == "d") || (userGuess == "e") || (userGuess == "f") || (userGuess == "g") || (userGuess == "h") || (userGuess == "i") || (userGuess == "j") || (userGuess == "k") || (userGuess == "l") || (userGuess == "m") || (userGuess == "n") || (userGuess == "o") || (userGuess == "p") || (userGuess == "q") || (userGuess == "r") || (userGuess == "s") || (userGuess == "t") || (userGuess == "u") || (userGuess == "v") || (userGuess == "w") || (userGuess == "x") || (userGuess == "y") || (userGuess == "z")) {
 
 			if(userGuess === computerChoice){
 				wins++;
 				console.log("You won");
 			}
 			else{
-				guesses --;
+				guessesLeft --;
 			}
 
-			if(guesses === 0){
+			if(guessesLeft == 0){
 				Losses++
 				console.log("You lose");
 			}
 		}
 // Your guesses so far will display the letter that the user has typed until the user wins or loses.
-document.getElementById('Guesses').innerHTML = "guessesLeft:" + guesses;
+document.getElementById('Guesses left:').innerHTML = "guessesLeft:" + guessesLeft;
 
 // When the player wins, increase the Wins counter and start the game over again (without refreshing the page).
-document.getElementById('Wins').innerHTML = "Wins:" + wins;
+document.getElementById('Wins:').innerHTML = "Wins:" + wins;
 
 // When the player loses, increase the Losses counter and restart the game without a page refresh (just like when the user wins).
-document.getElementById('Losses').innerHTML = "Losses:" + losses;
+document.getElementById('Losses:').innerHTML = "Losses:" + losses;
 }
 
 
