@@ -65,3 +65,5 @@ var html = "<h2>Wins:</h2>" + "<h2>Losses:</h2>" + "<h2>Your guesses so far:</h2
 document.querySelector("index").innerHTML = html;
 
 </script>
+
+// /*I had trouble reversing the guessesLeft count, displaying wins and loses, and trouble with incorporating a background image.*/
